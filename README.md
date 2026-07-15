@@ -1,4 +1,4 @@
-# pacbio-isoseq-preprocess
+# Pacbio-Isoseq-Preprocess
 
 A minimal, reproducible pipeline for preprocessing PacBio IsoSeq data into coordinate-sorted BAM files ready for downstream RNA-seq analysis.
 
