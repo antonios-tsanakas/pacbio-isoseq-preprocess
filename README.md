@@ -141,18 +141,7 @@ The alignment step only requires the genome FASTA. Gene annotation (GTF) is used
 - Tools installed by `environment.yml`: lima, isoseq3, minimap2, samtools
   
 
-  ## Why Use This Pipeline? (Key Advantages)
-
-While official or community-run pipelines exist for PacBio data, they are often over-engineered for researchers who simply want clean, aligned BAM files. This pipeline is built to address those specific gaps:
-
-| Feature / Goal | Standard Pipelines (e.g., `nf-core/isoseq`) | Custom Academic Wrappers | **This Pipeline (`pacbio-isoseq-preprocess`)** |
-| :--- | :--- | :--- | :--- |
-| **Workflow Engine** | Nextflow / Snakemake (High config overhead) | Hardcoded Bash / R scripts | **Minimal Bash / Docker (No setup tax)** |
-| **Starting Input** | Raw Subreads (Requires massive CPU to make CCS) | Obsolete XML/SMRT metadata sets | **Standard CCS BAM (Direct from sequencing core)** |
-| **Focus** | End-to-end collapsing & annotation (TAMA/Pigeon) | Niche, project-specific outputs | **Clean, coordinate-sorted, indexed BAMs** |
-| **Ease of Local Run** | Complex configuration profiles required | Hard to customize or run locally | **Run locally in 1 line via Docker or Conda** |
-
-### 🚀 Key Selling Points
+  ## Why Use This Pipeline? 
 
 * **No SMRTPipe/XML Clutter:** Older workflows require raw subreads and SMRT Link XML dataset wrappers. This pipeline works directly on modern, standard CCS BAM formats which most sequencing cores deliver by default.
 * **Fast-Track to Downstream Tools:** Instead of forcing you into a specific annotation or collapsing tool, this pipeline does one thing perfectly: it stops at indexed, coordinate-sorted BAM files. This is the precise entry format required for standard downstream packages like SQANTI3, FLAMES, rMATS-long, and SUPPA2.
