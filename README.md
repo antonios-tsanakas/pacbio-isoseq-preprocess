@@ -141,7 +141,7 @@ The alignment step only requires the genome FASTA. Gene annotation (GTF) is used
 - Tools installed by `environment.yml`: lima, isoseq3, minimap2, samtools
   
 
-  ## Why Use This Pipeline? 
+## Why Use This Pipeline? 
 
 * **No SMRTPipe/XML Clutter:** Older workflows require raw subreads and SMRT Link XML dataset wrappers. This pipeline works directly on modern, standard CCS BAM formats which most sequencing cores deliver by default.
 * **Fast-Track to Downstream Tools:** Instead of forcing you into a specific annotation or collapsing tool, this pipeline does one thing perfectly: it stops at indexed, coordinate-sorted BAM files. This is the precise entry format required for standard downstream packages like SQANTI3, FLAMES, rMATS-long, and SUPPA2.
